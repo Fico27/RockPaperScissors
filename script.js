@@ -73,6 +73,12 @@ function playGame() {
         
     }
 
+    if(humanScore > computerScore){
+        return `You did it! You beat the machine!`
+    } else {
+        return `Humanity is lost... The machine as won...`
+    }
+
 }
 
 
