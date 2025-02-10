@@ -13,15 +13,17 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let rawHumanChoice = prompt("Please select Rock, Paper, or Scissors!")
-    let humanChoice = rawHumanChoice.toLowerCase()
+    const validChoices = ["rock", "paper", 'scissors'];
+    let humanChoice = prompt("Please select Rock, Paper, or Scissors!").toLowerCase()
 
-    // if (humanChoice !== "Rock" || "Paper" ||  "Scissors") {
-    //     alert("Must Choose Rock, Paper, or Scissors!!!")
-    //     getHumanChoice()
+    if (validChoices.includes(humanChoice)) {
+        return humanChoice;
+    } else {
+        alert("please enter rock, paper or scissors. Failure to enter rock paper scissors is an auto loss")
+        getComputerChoice();
+    }
 
-    // }
-    return humanChoice
+
 }
 
 
@@ -30,7 +32,7 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     let round = 0;
-    
+
 
     while (round < 5) {
         const humanSelection = getHumanChoice();
@@ -70,13 +72,13 @@ function playGame() {
         }
 
         playRound(humanSelection, computerSelection)
-        
+
     }
 
-    if(humanScore > computerScore){
+    if (humanScore > computerScore) {
         return `You did it! You beat the machine!`
     } else {
-        return `Humanity is lost... The machine as won...`
+        return `Humanity is lost... The machine has won!`
     }
 
 }
