@@ -37,21 +37,26 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice === "rock" && computerChoice === "scissors") {
         console.log(`You win! ${humanChoice} beats ${computerChoice}!`)
         humanScore++
+        round++
         console.log(`Current score: User: ${humanScore} | Computer: ${computerScore}`)
     }
     else if (humanChoice === "paper" && computerChoice === "rock") {
         console.log(`You win! ${humanChoice} beats ${computerChoice}!`)
         humanScore++
+        round++
         console.log(`Current score: User: ${humanScore} | Computer: ${computerScore}`)
     }
     else if (humanChoice === "scissors" && computerChoice === "paper") {
         console.log(`You win! ${humanChoice} beats ${computerChoice}`)
         humanScore++
+        round++
         console.log(`Current score: User: ${humanScore} | Computer: ${computerScore}`)
     }
     else {
         console.log(`You lose! ${computerChoice} beats ${humanChoice}!`)
         computerScore++
+        round++
+        console.log(`Current score: User: ${humanScore} | Computer: ${computerScore}`)
     }
 }
 
