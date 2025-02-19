@@ -32,10 +32,11 @@ const btnPaper = document.querySelector(".btnPaper")
 const btnScissors = document.querySelector(".btnScissors")
 let humanSelection = '';
 
-
-
-
-
+btnRock.addEventListener("click", () => {
+    humanSelection = 'rock';
+    
+    console.log(humanSelection)
+});
 
 
 
@@ -44,12 +45,6 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     let round = 0;
-
-    btnRock.addEventListener("click", () => {
-        humanSelection = 'rock';
-        playRound(humanSelection, computerSelection)
-        console.log(humanSelection)
-    });
 
     // while (round < 5) {}
         // const humanSelection = getHumanChoice();
@@ -89,7 +84,7 @@ function playGame() {
             }
         }
 
-        playRound(humanSelection, computerSelection)
+        // playRound(humanSelection, computerSelection)
 
     
 
