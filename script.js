@@ -12,19 +12,31 @@ function getComputerChoice() {
 
 }
 
-function getHumanChoice() {
-    const validChoices = ["rock", "paper", 'scissors'];
-    let humanChoice = prompt("Please select Rock, Paper, or Scissors!").toLowerCase()
+// function getHumanChoice() {
+//     const validChoices = ["rock", "paper", 'scissors'];
+//     let humanChoice = prompt("Please select Rock, Paper, or Scissors!").toLowerCase()
 
-    if (validChoices.includes(humanChoice)) {
-        return humanChoice;
-    } else {
-        alert("please enter rock, paper or scissors. Failure to enter rock paper scissors is an auto loss")
-        getComputerChoice();
-    }
+//     if (validChoices.includes(humanChoice)) {
+//         return humanChoice;
+//     } else {
+//         alert("please enter rock, paper or scissors. Failure to enter rock paper scissors is an auto loss")
+//         getComputerChoice();
+//     }
 
 
-}
+// }
+
+const mainDiv = document.querySelector('div')
+const btnRock = document.querySelector(".btnRock")
+const btnPaper = document.querySelector(".btnPaper")
+const btnScissors = document.querySelector(".btnScissors")
+let humanSelection = '';
+
+
+
+
+
+
 
 
 function playGame() {
@@ -33,9 +45,15 @@ function playGame() {
     let computerScore = 0;
     let round = 0;
 
+    btnRock.addEventListener("click", () => {
+        humanSelection = 'rock';
+        playRound(humanSelection, computerSelection)
+        console.log(humanSelection)
+    });
 
-    while (round < 5) {
-        const humanSelection = getHumanChoice();
+    // while (round < 5) {}
+        // const humanSelection = getHumanChoice();
+        // const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
 
@@ -73,7 +91,7 @@ function playGame() {
 
         playRound(humanSelection, computerSelection)
 
-    }
+    
 
     if (humanScore > computerScore) {
         return `You did it! You beat the machine!`
