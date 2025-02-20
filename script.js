@@ -92,8 +92,14 @@ btnScissors.addEventListener("click", () => {
 
             if ((humanScore > computerScore) &&  round === 5){
                alert(`You did it! You beat the machine!`)
+               btnRock.disabled = true;
+               btnPaper.disabled = true;
+               btnScissors.disabled = true;
             } else if ((computerScore > humanScore) &&  round === 5) {
                 alert(`Humanity is lost... The machine has won!`) 
+                btnRock.disabled = true;
+                btnPaper.disabled = true;
+                btnScissors.disabled = true;
             }
 
         }
