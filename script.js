@@ -34,13 +34,26 @@ let humanSelection = '';
 
 btnRock.addEventListener("click", () => {
     humanSelection = 'rock';
-    
-    console.log(humanSelection)
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection)
 });
 
+btnPaper.addEventListener("click", () => {
+    humanSelection = 'paper';
+    const computerSelection = getComputerChoice();
 
+    playRound(humanSelection, computerSelection)
+});
 
-function playGame() {
+btnScissors.addEventListener("click", () => {
+    humanSelection = 'scissors';
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection)
+});
+
+    // function playGame() {}
 
     let humanScore = 0;
     let computerScore = 0;
@@ -49,12 +62,10 @@ function playGame() {
     // while (round < 5) {}
         // const humanSelection = getHumanChoice();
         // const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
 
 
         function playRound(humanSelection, computerSelection) {
-            console.log(humanSelection)
-            console.log(computerSelection)
+
             if (humanSelection === computerSelection) {
                 console.log("It's a tie!")
             }
@@ -82,19 +93,22 @@ function playGame() {
                 round++
                 console.log(`Current score: User: ${humanScore} | Computer: ${computerScore}`)
             }
+
+
+            if ((humanScore > computerScore) &&  round === 5){
+                return `You did it! You beat the machine!`
+            } else {
+                return `Humanity is lost... The machine has won!`
+            }
         }
 
         // playRound(humanSelection, computerSelection)
 
     
 
-    if (humanScore > computerScore) {
-        return `You did it! You beat the machine!`
-    } else {
-        return `Humanity is lost... The machine has won!`
-    }
 
-}
+
+
 
 
 
