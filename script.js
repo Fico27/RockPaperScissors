@@ -12,20 +12,6 @@ function getComputerChoice() {
 
 }
 
-// function getHumanChoice() {
-//     const validChoices = ["rock", "paper", 'scissors'];
-//     let humanChoice = prompt("Please select Rock, Paper, or Scissors!").toLowerCase()
-
-//     if (validChoices.includes(humanChoice)) {
-//         return humanChoice;
-//     } else {
-//         alert("please enter rock, paper or scissors. Failure to enter rock paper scissors is an auto loss")
-//         getComputerChoice();
-//     }
-
-
-// }
-
 const mainDiv = document.querySelector('div')
 const btnRock = document.querySelector(".btnRock")
 const btnPaper = document.querySelector(".btnPaper")
@@ -57,15 +43,10 @@ btnScissors.addEventListener("click", () => {
     playRound(humanSelection, computerSelection)
 });
 
-    // function playGame() {}
 
     let humanScore = 0;
     let computerScore = 0;
     let round = 0;
-
-    // while (round < 5) {}
-        // const humanSelection = getHumanChoice();
-        // const humanSelection = getHumanChoice();
 
 
         function playRound(humanSelection, computerSelection) {
@@ -119,28 +100,3 @@ btnScissors.addEventListener("click", () => {
 
 
 
-
-        // playRound(humanSelection, computerSelection)
-
-    
-
-
-
-
-
-
-
-
-
-//  || humanChoice ==="Paper" || humanChoice === "Scissors"
-
-// if(humanChoice !== "Rock"){
-//     alert("Must Choose Rock, Paper, or Scissors!!!")
-//     getHumanChoice()
-// } else if (humanChoice !=="Paper") {
-//     alert("Must Choose Rock, Paper, or Scissors!!!")
-//     getHumanChoice()
-// } else if (humanChoice === "Scissors") {
-//     alert("Must Choose Rock, Paper, or Scissors!!!")
-//     getHumanChoice()
-// }
